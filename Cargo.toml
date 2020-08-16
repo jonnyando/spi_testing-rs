@@ -1,0 +1,21 @@
+[package]
+name = "spi_testing"
+version = "0.1.0"
+authors = ["Jon <jonnyando@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+embedded-hal = "0.2.4"
+nb = "0.1.2"
+cortex-m = "0.6.3"
+cortex-m-rt = "0.6.12"
+# Panic behaviour, see https://crates.io/keywords/panic-impl for alternatives
+panic-halt = "0.2.0"
+panic-itm = "0.4.1"
+
+[dependencies.stm32f1xx-hal]
+version = "0.6.1"
+path = "../stm32f1xx-hal"
+features = ["rt", "stm32f103", "medium"]
